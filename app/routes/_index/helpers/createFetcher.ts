@@ -2,16 +2,12 @@ import type { GraphiQLProps } from "graphiql";
 
 export function createFetcher(apiUrl: string): GraphiQLProps["fetcher"] {
   return async function (graphQLParams, opts) {
-    if (graphQLParams.operationName === "IntrospectionQuery") return {};
-
-    const headers: HeadersInit = {
-      ...opts?.headers,
-      "Content-Type": "application/json",
-    };
-
     const response = await fetch(apiUrl, {
       method: "POST",
-      headers,
+      headers: {
+        ...opts?.headers,
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(graphQLParams),
     });
 
