@@ -1,0 +1,22 @@
+/* Styling fixes for GraphiQL Explorer. */
+.graphiql-container-wrap {
+  height: calc(100vh);
+}
+
+.graphiql-container .graphiql-plugin {
+  max-width: 100%;
+}
+
+.docExplorerWrap {
+  overflow-y: auto !important;
+  width: 100% !important;
+}
+
+.docExplorerWrap .doc-explorer-title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+}
+
+.docExplorerWrap .docExplorerHide {
+  display: none;
+}
