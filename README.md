@@ -2,52 +2,7 @@
 pnpm install
 ```
 
-```shell
-pnpm build
-
-> graphiql-issue-4038@1.0.0 build /Users/AndKiel/graphiql-issue-4038
-> pnpm prebuild && react-router build
-
-
-> graphiql-issue-4038@1.0.0 prebuild /Users/AndKiel/graphiql-issue-4038
-> rimraf .cache build
-
-vite v7.0.0 building for production...
-✓ 2144 modules transformed.
-✘ [ERROR] Could not resolve "monaco-editor/esm/vs/editor/editor.worker"
-
-✗ Build failed in 7.46s
-[vite-plugin-moncao-editor-esm] Build failed with 1 error:
-error: Could not resolve "monaco-editor/esm/vs/editor/editor.worker"
-    at failureErrorWithLog (/Users/AndKiel/graphiql-issue-4038/node_modules/.pnpm/esbuild@0.25.5/node_modules/esbuild/lib/main.js:1463:15)
-    at /Users/AndKiel/graphiql-issue-4038/node_modules/.pnpm/esbuild@0.25.5/node_modules/esbuild/lib/main.js:924:25
-    at /Users/AndKiel/graphiql-issue-4038/node_modules/.pnpm/esbuild@0.25.5/node_modules/esbuild/lib/main.js:876:52
-    at buildResponseToResult (/Users/AndKiel/graphiql-issue-4038/node_modules/.pnpm/esbuild@0.25.5/node_modules/esbuild/lib/main.js:922:7)
-    at /Users/AndKiel/graphiql-issue-4038/node_modules/.pnpm/esbuild@0.25.5/node_modules/esbuild/lib/main.js:949:16
-    at responseCallbacks.<computed> (/Users/AndKiel/graphiql-issue-4038/node_modules/.pnpm/esbuild@0.25.5/node_modules/esbuild/lib/main.js:601:9)
-    at handleIncomingPacket (/Users/AndKiel/graphiql-issue-4038/node_modules/.pnpm/esbuild@0.25.5/node_modules/esbuild/lib/main.js:656:12)
-    at Socket.readFromStdout (/Users/AndKiel/graphiql-issue-4038/node_modules/.pnpm/esbuild@0.25.5/node_modules/esbuild/lib/main.js:579:7)
-    at Socket.emit (node:events:518:28)
-    at addChunk (node:internal/streams/readable:561:12) {
-  errors: [
-    {
-      detail: undefined,
-      id: '',
-      location: null,
-      notes: [],
-      pluginName: '',
-      text: 'Could not resolve "monaco-editor/esm/vs/editor/editor.worker"'
-    }
-  ],
-  warnings: [],
-  code: 'PLUGIN_ERROR',
-  plugin: 'vite-plugin-moncao-editor-esm',
-  hook: 'writeBundle'
-}
- ELIFECYCLE  Command failed with exit code 1.
-```
-
-```shell
+p```shell
 pnpm dev
 
 > graphiql-issue-4038@1.0.0 dev /Users/AndKiel/graphiql-issue-4038
