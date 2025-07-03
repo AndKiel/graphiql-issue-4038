@@ -1,5 +1,5 @@
 import { reactRouter } from "@react-router/dev/vite";
-import monacoEditorEsmPlugin from "vite-plugin-monaco-editor-esm";
+import monacoEditorPlugin from "vite-plugin-monaco-editor";
 import { defineConfig } from "vite";
 
 export default defineConfig({
@@ -8,7 +8,8 @@ export default defineConfig({
   },
   plugins: [
     reactRouter(),
-    monacoEditorEsmPlugin({
+    // @ts-ignore
+    monacoEditorPlugin.default({
       customWorkers: [
         {
           label: "graphql",
