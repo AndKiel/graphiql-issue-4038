@@ -1,9 +1,9 @@
-/.react-router/
-/node_modules
+.react-router/
+node_modules
 
 # Remix / Vite
-/.cache/
-/build/
+.cache/
+build/
 
 # Other
 tsconfig.tsbuildinfo
