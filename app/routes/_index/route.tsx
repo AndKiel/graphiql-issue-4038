@@ -1,3 +1,4 @@
+import { NoSsr } from "@mui/material";
 import { GraphiQL } from "graphiql";
 import graphiqlStyles from "graphiql/style.css?url";
 import type { JSX } from "react";
@@ -19,13 +20,15 @@ export const links: LinksFunction = () => {
 
 export default function Route(): JSX.Element {
   return (
-    <GraphiQL
-      dangerouslyAssumeSchemaIsValid
-      defaultEditorToolsVisibility="variables"
-      fetcher={createFetcher("https://graphql.earthdata.nasa.gov/api")}
-      isHeadersEditorEnabled={false}
-    >
-      <GraphiQL.Logo>API Explorer</GraphiQL.Logo>
-    </GraphiQL>
+    <NoSsr>
+      <GraphiQL
+        dangerouslyAssumeSchemaIsValid
+        defaultEditorToolsVisibility="variables"
+        fetcher={createFetcher("https://graphql.earthdata.nasa.gov/api")}
+        isHeadersEditorEnabled={false}
+      >
+        <GraphiQL.Logo>API Explorer</GraphiQL.Logo>
+      </GraphiQL>
+    </NoSsr>
   );
 }
