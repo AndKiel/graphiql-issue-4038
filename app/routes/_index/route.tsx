@@ -1,5 +1,4 @@
 import { GraphiQL } from "graphiql";
-import "graphiql/setup-workers/vite";
 import graphiqlStyles from "graphiql/style.css?url";
 import type { JSX } from "react";
 import { type LinksFunction, type MetaFunction } from "react-router";
