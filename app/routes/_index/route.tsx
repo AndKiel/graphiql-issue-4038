@@ -1,10 +1,9 @@
 import { NoSsr } from "@mui/material";
-import { GraphiQL } from "graphiql";
 import graphiqlStyles from "graphiql/style.css?url";
 import type { JSX } from "react";
 import { type LinksFunction, type MetaFunction } from "react-router";
 
-import { createFetcher } from "./helpers/createFetcher";
+import { Explorer } from "./components/explorer.client";
 import explorerStyles from "./styles/explorer.css?url";
 
 export const meta: MetaFunction = () => {
@@ -21,14 +20,7 @@ export const links: LinksFunction = () => {
 export default function Route(): JSX.Element {
   return (
     <NoSsr>
-      <GraphiQL
-        dangerouslyAssumeSchemaIsValid
-        defaultEditorToolsVisibility="variables"
-        fetcher={createFetcher("https://graphql.earthdata.nasa.gov/api")}
-        isHeadersEditorEnabled={false}
-      >
-        <GraphiQL.Logo>API Explorer</GraphiQL.Logo>
-      </GraphiQL>
+      <Explorer/>
     </NoSsr>
   );
 }
