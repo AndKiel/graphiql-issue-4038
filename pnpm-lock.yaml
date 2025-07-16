@@ -35,6 +35,12 @@ importers:
       isbot:
         specifier: 5.1.28
         version: 5.1.28
+      monaco-editor:
+        specifier: 0.52.2
+        version: 0.52.2
+      monaco-graphql:
+        specifier: 1.7.1
+        version: 1.7.1(graphql@16.11.0)(monaco-editor@0.52.2)(prettier@3.6.2)
       react:
         specifier: 19.1.0
         version: 19.1.0
