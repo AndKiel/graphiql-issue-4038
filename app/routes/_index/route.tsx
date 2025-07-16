@@ -4,7 +4,6 @@ import type { JSX } from "react";
 import { type LinksFunction, type MetaFunction } from "react-router";
 
 import { Explorer } from "./components/explorer.client";
-import "./helpers/setupWorkers.client";
 import explorerStyles from "./styles/explorer.css?url";
 
 export const meta: MetaFunction = () => {
