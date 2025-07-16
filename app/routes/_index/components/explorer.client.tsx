@@ -2,6 +2,7 @@ import { GraphiQL } from "graphiql";
 import { JSX } from "react";
 
 import { createFetcher } from "../helpers/createFetcher";
+import "../helpers/setupWorkers.client";
 import { ShareExplorerQueryButton } from "./shareExplorerQueryButton.client";
 
 export function Explorer(): JSX.Element {

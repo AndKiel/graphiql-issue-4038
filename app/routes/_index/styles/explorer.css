@@ -1,5 +1,5 @@
 /* Styling fixes for GraphiQL Explorer. */
-.graphiql-container-wrap {
+.graphiql-container {
   height: calc(100vh);
 }
 

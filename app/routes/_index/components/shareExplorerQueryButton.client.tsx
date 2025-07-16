@@ -1,7 +1,7 @@
 import { ToolbarButton, useOperationsEditorState, useVariablesEditorState } from "@graphiql/react";
 import { JSX } from "react";
 
-import { copyToClipboard } from "../helpers/copyToClipboard";
+import { copyToClipboard } from "../helpers/copyToClipboard.client";
 import { encode } from "../helpers/encode";
 
 export function ShareExplorerQueryButton(): JSX.Element {
