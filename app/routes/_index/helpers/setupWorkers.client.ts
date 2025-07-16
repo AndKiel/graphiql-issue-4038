@@ -1,20 +1,18 @@
-import createJSONWorker from "https://esm.sh/monaco-editor/esm/vs/language/json/json.worker.js?worker";
-import createGraphQLWorker from "https://esm.sh/monaco-graphql/esm/graphql.worker.js?worker";
-import createEditorWorker from "https://esm.sh/monaco-editor/esm/vs/editor/editor.worker.js?worker";
+import editorWorker from "https://esm.sh/monaco-editor/esm/vs/editor/editor.worker.js?worker";
+import jsonWorker from "https://esm.sh/monaco-editor/esm/vs/language/json/json.worker.js?worker";
+import graphqlWorker from "https://esm.sh/monaco-graphql/esm/graphql.worker.js?worker";
 
-// @ts-ignore
-globalThis.MonacoEnvironment = {
+window.MonacoEnvironment = {
   getWorker(_workerId: unknown, label: string) {
     console.info("MonacoEnvironment.getWorker", { label });
     switch (label) {
       case "json":
-        // @ts-ignore
-        return createJSONWorker();
+        return new jsonWorker();
       case "graphql":
-        // @ts-ignore
-        return createGraphQLWorker();
+        return new graphqlWorker();
+      case "editorWorkerService":
+      default:
+        return new editorWorker();
     }
-    // @ts-ignore
-    return createEditorWorker();
   },
 };
